@@ -1,0 +1,134 @@
+﻿<Window x:Class="Work1811.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Work1811"
+        mc:Ignorable="d"
+        Title="Keyboard Trainer" Height="400" Width="812">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DefaultDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Speed</Label>
+                    <Label FontWeight="Bold">0</Label>
+                    <Label>chars/min</Label>
+                </StackPanel>
+            </Label>
+            <Label Margin="153,0,-153,0">
+                <StackPanel Orientation="Horizontal">
+                    <Label>Fails</Label>
+                    <Label FontWeight="Bold">0</Label>
+                </StackPanel>
+            </Label>
+            <Label Margin="431,-10,-281,0" VerticalAlignment="Top">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Difficulty"/>
+                        <Label FontWeight="Bold" Content="5"/>
+                        <Slider Width="100"/>
+                        <CheckBox/>
+                        <Label Content="Case Sensitive"/>
+                    </StackPanel>
+                    <Grid Width="336">
+                        <Button VerticalAlignment="Top" Style="{DynamicResource Common}" Content="Start" Margin="0,0,186,0" Height="20"/>
+                        <Button IsEnabled="False" VerticalAlignment="Center" Style="{DynamicResource Common}" Content="Stop" Margin="176,0,10,0" Height="20"/>
+                    </Grid>
+                </StackPanel>
+            </Label>
+
+        </Grid>
+        <TextBox Grid.Row="1" Background="LightBlue"></TextBox>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <Button Margin="0,2,4,2" Background="PaleVioletRed">`</Button>
+                <Button Margin="0,2,4,2" Background="PaleVioletRed">1</Button>
+                <Button Margin="0,2,4,2" Background="PaleVioletRed">2</Button>
+                <Button Margin="0,2,4,2" Background="Yellow">3</Button>
+                <Button Margin="0,2,4,2" Background="LawnGreen">4</Button>
+                <Button Margin="0,2,4,2" Background="SkyBlue">5</Button>
+                <Button Background="SkyBlue">6</Button>
+                <Button Background="MediumPurple">7</Button>
+                <Button Background="MediumPurple">8</Button>
+                <Button Background="MediumVioletRed">9</Button>
+                <Button Background="Yellow">0</Button>
+                <Button Background="LawnGreen">-</Button>
+                <Button Background="LawnGreen">=</Button>
+                <Button Style="{DynamicResource EnterStyle}">Backspace</Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button Style="{DynamicResource TabStyle}">Tab</Button>
+                <Button Background="PaleVioletRed">q</Button>
+                <Button  Background="Yellow">w</Button>
+                <Button  Background="LawnGreen">e</Button>
+                <Button Background="SkyBlue">r</Button>
+                <Button Background="SkyBlue">t</Button>
+                <Button Background="MediumPurple">y</Button>
+                <Button Background="MediumPurple">u</Button>
+                <Button Background="MediumVioletRed">i</Button>
+                <Button  Background="Yellow">o</Button>
+                <Button Background="LawnGreen" >p</Button>
+                <Button Background="LawnGreen">[</Button>
+                <Button Background="LawnGreen">]</Button>
+                <Button Style="{DynamicResource TabStyle}">\</Button>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Button Style="{DynamicResource EnterStyle}">Caps Lock</Button>
+                <Button Background="PaleVioletRed">a</Button>
+                <Button  Background="Yellow">s</Button>
+                <Button  Background="LawnGreen">d</Button>
+                <Button Background="SkyBlue">f</Button>
+                <Button Background="SkyBlue">g</Button>
+                <Button Background="MediumPurple">h</Button>
+                <Button Background="MediumPurple">j</Button>
+                <Button Background="MediumVioletRed">k</Button>
+                <Button  Background="Yellow">l</Button>
+                <Button Background="LawnGreen">;</Button>
+                <Button Background="LawnGreen">'</Button>
+                <Button Style="{DynamicResource EnterStyle}" Content="Backspace" Margin="0,2,0,2"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <Button Style="{DynamicResource ShiftStyle}" >Shift</Button>
+                <Button Background="PaleVioletRed">z</Button>
+                <Button  Background="Yellow">x</Button>
+                <Button  Background="LawnGreen">c</Button>
+                <Button Background="SkyBlue">v</Button>
+                <Button Background="SkyBlue">b</Button>
+                <Button Background="MediumPurple">n</Button>
+                <Button Background="MediumPurple">m</Button>
+                <Button Background="MediumVioletRed">,</Button>
+                <Button  Background="Yellow">.</Button>
+                <Button Background="LawnGreen">/</Button>
+                <Button Style="{DynamicResource ShiftStyle}">Shift</Button>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <Button Style="{DynamicResource CtrlStyle}">Ctrl</Button>
+                <Button Style="{DynamicResource CtrlStyle}">Win</Button>
+                <Button Style="{DynamicResource CtrlStyle}">Alt</Button>
+                <Button Style="{DynamicResource SpaceStyle}">Space</Button>
+                <Button Style="{DynamicResource CtrlStyle}">Alt</Button>
+                <Button Style="{DynamicResource CtrlStyle}">Win</Button>
+                <Button Style="{DynamicResource CtrlStyle}">Ctrl</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
